@@ -1,0 +1,569 @@
+/*** 
+======================
+   Quick Contact Css
+======================
+***/
+.quick-contact {
+    background-color: var(--thm-white);
+    padding: 120px 0px 93px;
+}
+
+
+.single-quick-contact {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.single-quick-contact-inner {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    background-color: var(--thm-gray-bg);
+    padding: 0px 40px 30px;
+    margin-top: 40px;
+}
+
+.single-quick-contact-inner::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    right: 0;
+    margin: 0 auto;
+    width: 40px;
+    height: 20px;
+    background-color: var(--thm-gray-bg);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.single-quick-contact-inner .icon-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    background-color: var(--thm-white);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+    font-size: 46px;
+    z-index: 1;
+}
+
+.single-quick-contact-inner .icon-box span.icon-map-1 .path1 {
+    color: var(--thm-primary-color);
+}
+
+.single-quick-contact-inner .icon-box span.icon-map-1 .path2 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-map-1 .path3 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-map-1 .path4 {
+    color: var(--thm-primary-color);
+}
+
+.single-quick-contact-inner .icon-box span.icon-map-1 .path5 {
+    color: var(--thm-primary-color);
+}
+
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path1 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path2 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path3 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path4 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path5 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path6 {
+    color: var(--thm-primary-color);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path7 {
+    color: var(--thm-primary-color);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path8 {
+    color: var(--thm-primary-color);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path9 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path10 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .icon-box span.icon-deadline .path11 {
+    color: var(--thm-black);
+}
+
+.single-quick-contact-inner .content-box {
+    position: relative;
+    display: block;
+    padding-top: 73px;
+}
+
+.single-quick-contact-inner .content-box h3 {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.single-quick-contact-inner .content-box h3 a {
+    color: var(--thm-balck);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-quick-contact-inner .content-box h3 a:hover {
+    color: var(--thm-primary-color);
+}
+
+.single-quick-contact-inner .content-box p {
+    margin: 0;
+}
+
+.single-quick-contact-inner .content-box .btn-box {
+    position: relative;
+    display: block;
+    padding-top: 17px;
+}
+
+.single-quick-contact-inner .content-box .btn-box a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: var(--thm-black);
+    font-size: 16px;
+    line-height: 25px;
+    font-family: var(--thm-font-2);
+    font-weight: 600;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-quick-contact-inner .content-box .btn-box a:hover {
+    color: var(--thm-primary-color);
+}
+
+.single-quick-contact-inner .content-box .btn-box a i {
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.single-quick-contact .text-box {
+    position: relative;
+    display: block;
+    padding-top: 43px;
+}
+
+.single-quick-contact .text-box p {
+    margin: 0;
+}
+
+.single-quick-contact .text-box p span {
+    color: var(--thm-black);
+}
+
+.single-quick-contact .text-box p a {
+    color: var(--thm-body-font-color);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-quick-contact .text-box p a:hover {
+    color: var(--thm-primary-color);
+}
+
+
+
+/*** 
+==========================
+   Office Location Css
+==========================
+***/
+.office-location {
+    background-color: var(--thm-black-bg);
+    padding: 120px 0px 120px;
+}
+
+.office-location .sec-title h2 {
+    color: var(--thm-white);
+}
+
+.office-location .auto-container {
+    max-width: 1840px;
+}
+
+.office-location .auto-container .row {
+    --bs-gutter-x: 50px;
+}
+
+
+.single-office-location {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.single-office-location .img-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-left: 140px;
+}
+
+.single-office-location .img-box img {
+    width: 100%;
+}
+
+.single-office-location .phone-email-box {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 4px;
+    background-color: var(--thm-white);
+    padding: 13px 25px 13px;
+    z-index: 5;
+}
+
+.single-office-location .phone-email-box .number {
+    position: relative;
+    display: block;
+}
+
+.single-office-location .phone-email-box .number p {
+    margin: 0;
+}
+
+.single-office-location .phone-email-box .number p a {
+    color: var(--thm-black);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-office-location .phone-email-box .number p a:hover {
+    color: var(--thm-primary-color);
+}
+
+.single-office-location .phone-email-box .email {
+    position: relative;
+    display: block;
+    padding-top: 2px;
+}
+
+.single-office-location .phone-email-box .email p {
+    margin: 0;
+}
+
+.single-office-location .phone-email-box .email p a {
+    color: var(--thm-body-font-color);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-office-location .phone-email-box .email p a:hover {
+    color: var(--thm-primary-color);
+}
+
+.single-office-location .content-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+}
+
+.single-office-location .content-box .title {
+    position: relative;
+    display: block;
+}
+
+.single-office-location .content-box .title h3 {
+    color: var(--thm-white);
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.single-office-location .content-box .title .shape {
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+
+.single-office-location .content-box .title .shape img {
+    width: auto;
+}
+
+.single-office-location .content-box .location {
+    position: relative;
+    display: block;
+    padding-top: 34px;
+}
+
+.single-office-location .content-box .location a {
+    position: relative;
+    display: inline-block;
+    color: #a0a3b1;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: var(--thm-font-2);
+    font-weight: 600;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-office-location .content-box .location a:hover {
+    color: var(--thm-white);
+}
+
+
+.home-google-map-outer-box {
+    position: absolute;
+    background-color: #f3f1f1;
+    width: 100%;
+    height: 0%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transition: all 500ms ease;
+}
+
+.single-office-location:hover .home-google-map-outer-box {
+    height: 100%;
+    top: 0px;
+}
+
+
+.home-google-map-outer-box .google-map {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-google-map__one {
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: luminosity;
+}
+
+.office-location-style1-carousel.owl-nav-style-one.owl-theme .owl-nav {
+    position: absolute;
+    top: -115px;
+    right: 315px;
+}
+
+
+/*** 
+=============================================
+    Main Contact Form Css
+=============================================
+***/
+.main-contact-form {
+    background-color: var(--thm-gray-bg);
+    padding: 120px 0px 120px;
+}
+
+.main-contact-form::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 43%;
+    background-color: var(--thm-white);
+    z-index: -1;
+}
+
+.contact-form {
+    position: relative;
+    display: block;
+    border-radius: 4px 0px 0px 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 33px 40px 40px;
+    margin-right: -30px;
+}
+
+.contact-form form {
+    position: relative;
+    display: block;
+}
+
+.contact-form form .form-group {
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.contact-form form .form-group .label-box {
+    position: relative;
+    display: block;
+    padding-bottom: 2px;
+}
+
+.contact-form form .form-group .label-box label {
+    color: var(--thm-black);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    font-family: var(--thm-font-2);
+}
+
+.contact-form form .input-box {
+    position: relative;
+    display: block;
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form textarea {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    border: 0px solid transparent;
+    background-color: var(--thm-gray-bg);
+    width: 100%;
+    height: 50px;
+    color: var(--thm-body-font-color);
+    font-size: 16px;
+    font-family: var(--thm-font);
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 500ms ease;
+}
+
+.contact-form form textarea {
+    height: 97px;
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.contact-form form input[type="text"]::-webkit-input-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form input[type="text"]:-moz-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form input[type="text"]::-moz-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form input[type="text"]:-ms-input-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form input[type="email"]::-webkit-input-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form input[type="email"]:-moz-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form input[type="email"]::-moz-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form input[type="email"]:-ms-input-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form textarea::-webkit-input-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form textarea:-moz-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form textarea::-moz-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+.contact-form form textarea:-ms-input-placeholder {
+    color: var(--thm-body-font-color);
+}
+
+
+.contact-form form button {
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+
+.contact-form form button.btn-one {
+    display: block;
+    width: 100%;
+    line-height: 35px;
+}
+
+.contact-form form button.btn-one::after {
+    background-color: var(--thm-secondary-color);
+}
+
+.main-contact-form-img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 0px 4px 4px 0px;
+    z-index: 2;
+}
+
+.main-contact-form-img img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*** 
+=============================================
+    End Css
+=============================================
+***/

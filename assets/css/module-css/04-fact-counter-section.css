@@ -1,0 +1,222 @@
+/*** 
+=============================================
+    Fact Counter style1 Css
+=============================================
+***/
+.fact-counter-style1 {
+    padding: 0px 0px 0px;
+    background-color: var(--thm-gray-bg);
+}
+
+.fact-counter-style1__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc((100% + 0px) / 2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    z-index: -1;
+}
+
+.fact-counter-style1__info {
+    position: relative;
+    display: block;
+    max-width: 540px;
+    background-color: rgba(9, 16, 51, 0.90);
+    float: right;
+    margin-right: -15px;
+    padding: 120px 50px 120px;
+}
+
+.fact-counter-style1__info .sec-title {
+    padding-bottom: 8px;
+}
+
+.fact-counter-style1__info .sec-title h2 {
+    color: var(--thm-white);
+}
+
+.fact-counter-style1__info .text {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__info .text p {
+    color: #a0a3b1;
+}
+
+.fact-counter-style1__info .chart-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.fact-counter-style1__info .chart-box .chart {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__info .chart-box .chart img {
+    width: auto;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content {
+    position: relative;
+    display: block;
+    margin-left: 25px;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li+li {
+    margin-top: 16px;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .cercle-box {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #5171ff;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .cercle-box.one {
+    background-color: #f86565;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .cercle-box.two {
+    background-color: #f8bf65;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .cercle-box.three {
+    background-color: #0ccfa2;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .text {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .text p {
+    color: var(--thm-white);
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .percent {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__info .chart-box .chart-box__content ul li .percent p {
+    color: #a0a3b1;
+}
+
+
+
+.fact-counter-style1__content {
+    position: relative;
+    display: block;
+    padding: 120px 0px 90px;
+    margin-left: 45px;
+}
+
+.fact-counter-style1__single {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    background-color: var(--thm-white);
+    padding: 29px 25px 28px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+.fact-counter-style1__single .top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fact-counter-style1__single .top .left {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__single .top .left .title-box {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__single .top .left .title-box h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.fact-counter-style1__single .top .left .title-box .shape {
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+
+.fact-counter-style1__single .top .left .title-box .shape img {
+    width: auto;
+}
+
+.fact-counter-style1__single .top .right {
+    position: relative;
+    display: block;
+}
+
+.fact-counter-style1__single .top .right .icon-box {
+    position: relative;
+    display: inline-block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.fact-counter-style1__single .odometer-counting {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 9px;
+}
+
+.fact-counter-style1__single .odometer-counting h2 {
+    font-size: 48px;
+    line-height: 1.2em;
+    font-weight: 600;
+    font-family: var(--thm-font);
+}
+
+.fact-counter-style1__single p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============== End Css ==============*/

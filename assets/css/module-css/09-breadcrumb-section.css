@@ -1,0 +1,176 @@
+/*** 
+=============================================
+    Breadcrumb style1
+=============================================
+***/
+.breadcrumb-style1 {
+    position: relative;
+    display: block;
+    margin-top: 50px;
+    z-index: 10;
+}
+
+.breadcrumb-style1-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgb(9, 16, 51, 0.75);
+    background-blend-mode: luminosity;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.breadcrumb-style1-bg__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #091033;
+    background-blend-mode: multiply;
+    opacity: 0.45;
+}
+
+.breadcrumb-style1-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(9, 16, 51);
+    background: linear-gradient(0deg, rgba(9, 16, 51, 0.23853291316526615) 70%, rgba(9, 16, 51, 1) 100%);
+}
+
+.breadcrumb-style1-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(9, 16, 51);
+    background: linear-gradient(90deg, rgba(9, 16, 51, 1) 0%, rgba(9, 16, 51, 0.5998774509803921) 35%, rgba(9, 16, 51, 0.19371498599439774) 100%);
+}
+
+.breadcrumb-style1 .inner-content {
+    position: relative;
+    display: block;
+    padding: 222px 0px 138px;
+}
+
+.breadcrumb-style1 .title {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.breadcrumb-style1 .title h2 {
+    color: #ffffff;
+    font-size: 44px;
+    line-height: 1.2em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.breadcrumb-menu {
+    position: absolute;
+    bottom: 23px;
+    right: 0;
+}
+
+.breadcrumb-menu ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-menu ul li {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: var(--thm-white);
+    font-size: 16px;
+    line-height: 25px;
+    font-family: var(--thm-font-2);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.breadcrumb-menu ul li+li {
+    margin-left: 3px;
+}
+
+.breadcrumb-menu ul li a {
+    color: var(--thm-white);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.breadcrumb-menu ul li a:hover,
+.breadcrumb-menu ul li.active {
+    color: var(--thm-secondary-color)
+}
+
+.breadcrumb-menu ul li span {
+    font-size: 20px;
+    color: var(--thm-secondary-color);
+}
+
+
+
+
+/*** 
+=============================================
+    Breadcrumb style2
+=============================================
+***/
+.breadcrumb-style1--style2 .inner-content {
+    padding: 242px 0px 163px;
+}
+
+.breadcrumb-style1 .title .meta-box {
+    position: relative;
+    display: block;
+    padding: 17px 0px 0px;
+}
+
+.breadcrumb-style1 .title .meta-box .meta-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-style1 .title .meta-box .meta-info li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-style1 .title .meta-box .meta-info li+li {
+    margin-left: 25px;
+}
+
+.breadcrumb-style1 .title .meta-box .meta-info li .icon {
+    position: relative;
+    display: block;
+    line-height: 0;
+    color: var(--thm-primary-color);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.breadcrumb-style1 .title .meta-box .meta-info li .text {
+    position: relative;
+    display: block;
+    padding-left: 9px;
+}
+
+.breadcrumb-style1 .title .meta-box .meta-info li .text p {
+    color: #8e8f96;
+}
