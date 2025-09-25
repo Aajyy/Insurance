@@ -1455,7 +1455,7 @@ Mobile Nav Megamenu Css
     flex-wrap: wrap;
     border-radius: 4px;
     background-color: var(--thm-white);
-    padding: 0px 30px 0px;
+    padding: 0px 0px 0px;
 }
 
 .main-header-style1__bottom-left {
