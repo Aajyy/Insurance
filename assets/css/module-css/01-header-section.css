@@ -1655,6 +1655,7 @@ Mobile Nav Megamenu Css
     display: block;
     line-height: 0;
     padding-left: 40px;
+    padding-right: 10px;
 }
 
 .header-button-style1 .btn-one {

@@ -26,9 +26,9 @@
 :root {
     --thm-font: "Lexend", sans-serif;
     --thm-font-2: "Sora", sans-serif;
-    --thm-primary-color: #5171ff;
+    --thm-primary-color: #822f7a;;
     --thm-primary-color-rgb: 81, 113, 255;
-    --thm-secondary-color: #0ccfa2;
+    --thm-secondary-color: #f8c327;
     --thm-secondary-color-rgb: 12, 207, 162;
 
     --thm-body-font-color: #656567;
@@ -90,7 +90,7 @@ a {
     .nkis-wa-icon {
         position: fixed;
         bottom: 30px;
-        right: 30px;
+        right: 40px;
         width: 60px;
         height: 60px;
         background-color: #25D366;
@@ -404,6 +404,7 @@ img {
     transition-timing-function: ease-in-out;
     transition-duration: 0.7s;
     transition-property: all;
+    padding-left: 10px;
 }
 
 /* Form validation styles */
@@ -1347,6 +1348,7 @@ select:focus {
     justify-content: center;
     width: 55px;
     height: 55px;
+    margin-bottom: 50px;
     background: #182045;
     border-radius: 6px;
     color: #ffffff;
