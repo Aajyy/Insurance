@@ -164,38 +164,37 @@
                             <!--End Single Footer Widget-->
 
                             <!--Start Single Footer Widget-->
-                            <div class="col-xl-3 col-lg-6 col-md-6 single-widget">
-                                <div class="single-footer-widget marbtm">
-                                    <div class="footer-widget-subscribe-box">
-                                        <div class="overlay-icon">
-                                            <img src="assets/images/icon/footer-widget-subscribe-icon-1.png" alt="icon">
-                                        </div>
-                                        <h3>Subscribe to Receive Updates</h3>
-                                        <div class="subscribe-box-form">
-                                            <form action="https://mehedi.asiandevelopers.com/2025/NKIS/index.html"
-                                                method="post">
-                                                <div class="form-group">
-                                                    <input type="email" name="email" placeholder="Email Address"
-                                                        required="">
-                                                    <div class="icon">
-                                                        <i class="icon-mail"></i>
-                                                    </div>
-                                                </div>
-                                                <button class="submit btn-one">
-                                                    <span class="txt">Subscribe Us</span>
-                                                </button>
-                                                <div class="checked-box1">
-                                                    <input type="checkbox" name="skipper1" id="skipper" checked="">
-                                                    <label for="skipper">
-                                                        <span></span>Agree terms & conditions.
-                                                    </label>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                          <!-- In your footer, replace the current subscription section with this: -->
+<div class="col-xl-3 col-lg-6 col-md-6 single-widget">
+    <div class="single-footer-widget marbtm">
+        <div class="footer-widget-subscribe-box">
+            <div class="overlay-icon">
+                <img src="assets/images/icon/footer-widget-subscribe-icon-1.png" alt="icon">
+            </div>
+            <h3>Subscribe to Receive Updates</h3>
+            <div class="subscribe-box-form">
+                <form id="newsletterForm" method="post">
+                    <div class="form-group">
+                        <input type="email" name="email" id="subscribeEmail" placeholder="Email Address" required>
+                        <div class="icon">
+                            <i class="icon-mail"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit btn-one" id="subscribeBtn">
+                        <span class="txt">Subscribe Us</span>
+                    </button>
+                    <div class="checked-box1">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms">
+                            <span></span>Agree terms & conditions.
+                        </label>
+                    </div>
+                    <div id="subscribeMessage" style="margin-top: 10px; display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
                             <!--End Single Footer Widget-->
 
                         </div>
