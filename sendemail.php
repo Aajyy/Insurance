@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /* =========================
        2. Send Email
     ========================= */
-    $to = "yadavajay48069@gmail.com";  
+    $to = "sandeepyadav37806@gmail.com";  
     $email_subject = "Contact Form - " . (!empty($subject) ? $subject : "New Message");
 
     $email_body = "You have received a new message from your website contact form:\n\n" .
