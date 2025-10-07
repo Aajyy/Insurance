@@ -8551,6 +8551,11 @@ li .single-process-style1 .content-box p {
 .form-group input:valid {
     border-color: #28a745;
 }
+
+
+
+
+
 #ui-datepicker-div.ui-datepicker .ui-datepicker-header {
     background: #151515 none repeat scroll 0 0;
     border: 2px solid #252525;
@@ -8568,7 +8573,295 @@ li .single-process-style1 .content-box p {
     background: #f5f5f5 !important;
     border: 1px solid #f9f9f9 !important;
 }
+.nkis-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
+        .nkis-section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .nkis-section-title h2 {
+            font-size: 2.5rem;
+            color: #1a3a6c;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .nkis-section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #2c5aa0;
+            border-radius: 2px;
+        }
+
+        .nkis-section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .nkis-maps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .nkis-map-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nkis-map-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .nkis-map-header {
+            padding: 25px 25px 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nkis-map-header h3 {
+            font-size: 1.4rem;
+            color: #1a3a6c;
+            margin: 0;
+        }
+
+        .nkis-location-badge {
+            display: flex;
+            align-items: center;
+            background: #f0f7ff;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #2c5aa0;
+            font-weight: 500;
+        }
+
+        .nkis-location-badge i {
+            margin-right: 6px;
+        }
+
+        .nkis-map-wrapper {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .nkis-google-map {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .nkis-map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 58, 108, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nkis-map-card:hover .nkis-map-overlay {
+            opacity: 1;
+        }
+
+        .nkis-view-map-btn {
+            background: white;
+            color: #2c5aa0;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nkis-view-map-btn:hover {
+            background: #2c5aa0;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .nkis-view-map-btn i {
+            margin-right: 8px;
+        }
+
+        .nkis-map-details {
+            padding: 25px;
+        }
+
+        .nkis-address, .nkis-contact-info, .nkis-hours {
+            display: flex;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+
+        .nkis-address i, .nkis-contact-info i, .nkis-hours i {
+            color: #2c5aa0;
+            margin-right: 15px;
+            margin-top: 3px;
+            min-width: 16px;
+            font-size: 1.1rem;
+        }
+
+        .nkis-map-details p {
+            margin: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .nkis-contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nkis-phone, .nkis-email {
+            display: flex;
+            align-items: center;
+        }
+
+        .nkis-contact-info a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nkis-contact-info a:hover {
+            color: #2c5aa0;
+        }
+
+        .nkis-action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .nkis-btn-direction, .nkis-btn-call {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nkis-btn-direction {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .nkis-btn-call {
+            background: #f0f7ff;
+            color: #2c5aa0;
+        }
+
+        .nkis-btn-direction:hover {
+            background: #1e3d6f;
+            transform: translateY(-2px);
+        }
+
+        .nkis-btn-call:hover {
+            background: #e1edff;
+            transform: translateY(-2px);
+        }
+
+        .nkis-btn-direction i, .nkis-btn-call i {
+            margin-right: 8px;
+        }
+
+        .nkis-map-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .nkis-feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .nkis-feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .nkis-feature-icon {
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            margin-bottom: 20px;
+        }
+
+        .nkis-feature-card h4 {
+            font-size: 1.3rem;
+            color: #1a3a6c;
+            margin-bottom: 15px;
+        }
+
+        .nkis-feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .nkis-maps-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nkis-map-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .nkis-location-badge {
+                margin-top: 10px;
+            }
+            
+            .nkis-action-buttons {
+                flex-direction: column;
+            }
+            
+            .nkis-section-title h2 {
+                font-size: 2rem;
+            }
+        }
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
