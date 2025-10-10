@@ -26,7 +26,8 @@
 :root {
     --thm-font: "Lexend", sans-serif;
     --thm-font-2: "Sora", sans-serif;
-    --thm-primary-color: #822f7a;;
+    --thm-primary-color: #822f7a;
+    ;
     --thm-primary-color-rgb: 81, 113, 255;
     --thm-secondary-color: #f8c327;
     --thm-secondary-color-rgb: 12, 207, 162;
@@ -169,21 +170,38 @@ body {
 }
 
 @keyframes nkisSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes nkisLogoPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes nkisDotBounce {
-    0%, 80%, 100% {
+
+    0%,
+    80%,
+    100% {
         transform: scale(0.8);
         opacity: 0.5;
     }
+
     40% {
         transform: scale(1.2);
         opacity: 1;
@@ -224,165 +242,179 @@ a {
         max-width: 1200px;
     }
 }
-  /* WhatsApp Modal Styles - Unique Classes */
+
+/* WhatsApp Modal Styles - Unique Classes */
+.nkis-wa-icon {
+    position: fixed;
+    bottom: 106px;
+    right: 48px;
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nkis-wa-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+}
+
+.nkis-wa-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.nkis-wa-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    animation: nkis-fadeIn 0.3s ease;
+}
+
+@keyframes nkis-fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nkis-wa-modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: nkis-slideUp 0.3s ease;
+}
+
+@keyframes nkis-slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nkis-wa-modal-header {
+    background-color: #075E54;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nkis-wa-modal-header i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.nkis-wa-modal-header h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.nkis-wa-modal-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.nkis-wa-modal-body p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #555;
+}
+
+.nkis-wa-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.nkis-wa-button:hover {
+    background-color: #128C7E;
+}
+
+.nkis-wa-cancel {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.nkis-wa-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.nkis-wa-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    z-index: 10001;
+}
+
+@media (max-width: 480px) {
     .nkis-wa-icon {
-        position: fixed;
-        bottom: 30px;
-        right: 40px;
-        width: 60px;
-        height: 60px;
-        background-color: #25D366;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-        cursor: pointer;
-        z-index: 9999;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .nkis-wa-icon:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
-    }
-    
-    .nkis-wa-icon i {
-        font-size: 32px;
-        color: white;
-    }
-    
-    .nkis-wa-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 10000;
-        align-items: center;
-        justify-content: center;
-        animation: nkis-fadeIn 0.3s ease;
-    }
-    
-    @keyframes nkis-fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    
-    .nkis-wa-modal-content {
-        background-color: white;
-        width: 90%;
-        max-width: 400px;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        animation: nkis-slideUp 0.3s ease;
-    }
-    
-    @keyframes nkis-slideUp {
-        from { transform: translateY(30px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
-    
-    .nkis-wa-modal-header {
-        background-color: #075E54;
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .nkis-wa-modal-header i {
-        font-size: 50px;
-        margin-bottom: 10px;
-    }
-    
-    .nkis-wa-modal-header h2 {
-        font-size: 24px;
-        margin-bottom: 5px;
-    }
-    
-    .nkis-wa-modal-body {
-        padding: 25px;
-        text-align: center;
-    }
-    
-    .nkis-wa-modal-body p {
-        margin-bottom: 25px;
-        font-size: 16px;
-        color: #555;
-    }
-    
-    .nkis-wa-button {
-        display: inline-block;
-        background-color: #25D366;
-        color: white;
-        text-decoration: none;
-        padding: 12px 25px;
-        border-radius: 30px;
-        font-weight: bold;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        margin: 5px;
-    }
-    
-    .nkis-wa-button:hover {
-        background-color: #128C7E;
-    }
-    
-    .nkis-wa-cancel {
-        display: inline-block;
-        background-color: #f0f0f0;
-        color: #555;
-        text-decoration: none;
-        padding: 12px 25px;
-        border-radius: 30px;
-        font-weight: bold;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        margin: 5px;
-        cursor: pointer;
-    }
-    
-    .nkis-wa-cancel:hover {
-        background-color: #e0e0e0;
-    }
-    
-    .nkis-wa-close {
-        position: absolute;
-        top: 20px;
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
         right: 20px;
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        z-index: 10001;
     }
-    
-    @media (max-width: 480px) {
-        .nkis-wa-icon {
-            width: 50px;
-            height: 50px;
-            bottom: 20px;
-            right: 20px;
-        }
-        
-        .nkis-wa-icon i {
-            font-size: 26px;
-        }
-        
-        .nkis-wa-modal-content {
-            width: 95%;
-        }
+
+    .nkis-wa-icon i {
+        font-size: 26px;
     }
+
+    .nkis-wa-modal-content {
+        width: 95%;
+    }
+}
+
 .auto-container {
     position: static;
     max-width: 1200px;
@@ -1484,9 +1516,9 @@ select:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 55px;
-    height: 55px;
-    margin-bottom: 50px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0px;
     background: #182045;
     border-radius: 6px;
     color: #ffffff;
@@ -8655,6 +8687,7 @@ li .single-process-style1 .content-box p {
     padding: 5px;
     z-index: 999 !important;
 }
+
 /* Subscription Form Messages */
 #subscribeMessage {
     padding: 10px;
@@ -8711,295 +8744,304 @@ li .single-process-style1 .content-box p {
     background: #f5f5f5 !important;
     border: 1px solid #f9f9f9 !important;
 }
+
 .nkis-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .nkis-section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+.nkis-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-        .nkis-section-title h2 {
-            font-size: 2.5rem;
-            color: #1a3a6c;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
+.nkis-section-title h2 {
+    font-size: 2.5rem;
+    color: #1a3a6c;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
 
-        .nkis-section-title h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: #2c5aa0;
-            border-radius: 2px;
-        }
+.nkis-section-title h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #2c5aa0;
+    border-radius: 2px;
+}
 
-        .nkis-section-title p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+.nkis-section-title p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-        .nkis-maps-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
+.nkis-maps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
 
-        .nkis-map-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.nkis-map-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .nkis-map-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-        }
+.nkis-map-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
 
-        .nkis-map-header {
-            padding: 25px 25px 15px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.nkis-map-header {
+    padding: 25px 25px 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .nkis-map-header h3 {
-            font-size: 1.4rem;
-            color: #1a3a6c;
-            margin: 0;
-        }
+.nkis-map-header h3 {
+    font-size: 1.4rem;
+    color: #1a3a6c;
+    margin: 0;
+}
 
-        .nkis-location-badge {
-            display: flex;
-            align-items: center;
-            background: #f0f7ff;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: #2c5aa0;
-            font-weight: 500;
-        }
+.nkis-location-badge {
+    display: flex;
+    align-items: center;
+    background: #f0f7ff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #2c5aa0;
+    font-weight: 500;
+}
 
-        .nkis-location-badge i {
-            margin-right: 6px;
-        }
+.nkis-location-badge i {
+    margin-right: 6px;
+}
 
-        .nkis-map-wrapper {
-            position: relative;
-            height: 250px;
-            overflow: hidden;
-        }
+.nkis-map-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
 
-        .nkis-google-map {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+.nkis-google-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
-        .nkis-map-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(26, 58, 108, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+.nkis-map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 58, 108, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-        .nkis-map-card:hover .nkis-map-overlay {
-            opacity: 1;
-        }
+.nkis-map-card:hover .nkis-map-overlay {
+    opacity: 1;
+}
 
-        .nkis-view-map-btn {
-            background: white;
-            color: #2c5aa0;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
+.nkis-view-map-btn {
+    background: white;
+    color: #2c5aa0;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
-        .nkis-view-map-btn:hover {
-            background: #2c5aa0;
-            color: white;
-            transform: scale(1.05);
-        }
+.nkis-view-map-btn:hover {
+    background: #2c5aa0;
+    color: white;
+    transform: scale(1.05);
+}
 
-        .nkis-view-map-btn i {
-            margin-right: 8px;
-        }
+.nkis-view-map-btn i {
+    margin-right: 8px;
+}
 
-        .nkis-map-details {
-            padding: 25px;
-        }
+.nkis-map-details {
+    padding: 25px;
+}
 
-        .nkis-address, .nkis-contact-info, .nkis-hours {
-            display: flex;
-            margin-bottom: 18px;
-            align-items: flex-start;
-        }
+.nkis-address,
+.nkis-contact-info,
+.nkis-hours {
+    display: flex;
+    margin-bottom: 18px;
+    align-items: flex-start;
+}
 
-        .nkis-address i, .nkis-contact-info i, .nkis-hours i {
-            color: #2c5aa0;
-            margin-right: 15px;
-            margin-top: 3px;
-            min-width: 16px;
-            font-size: 1.1rem;
-        }
+.nkis-address i,
+.nkis-contact-info i,
+.nkis-hours i {
+    color: #2c5aa0;
+    margin-right: 15px;
+    margin-top: 3px;
+    min-width: 16px;
+    font-size: 1.1rem;
+}
 
-        .nkis-map-details p {
-            margin: 0;
-            color: #555;
-            line-height: 1.6;
-        }
+.nkis-map-details p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
 
-        .nkis-contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+.nkis-contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-        .nkis-phone, .nkis-email {
-            display: flex;
-            align-items: center;
-        }
+.nkis-phone,
+.nkis-email {
+    display: flex;
+    align-items: center;
+}
 
-        .nkis-contact-info a {
-            color: #555;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.nkis-contact-info a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-        .nkis-contact-info a:hover {
-            color: #2c5aa0;
-        }
+.nkis-contact-info a:hover {
+    color: #2c5aa0;
+}
 
-        .nkis-action-buttons {
-            display: flex;
-            gap: 12px;
-            margin-top: 25px;
-        }
+.nkis-action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
 
-        .nkis-btn-direction, .nkis-btn-call {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 22px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            flex: 1;
-            justify-content: center;
-        }
+.nkis-btn-direction,
+.nkis-btn-call {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    flex: 1;
+    justify-content: center;
+}
 
-        .nkis-btn-direction {
-            background: #2c5aa0;
-            color: white;
-        }
+.nkis-btn-direction {
+    background: #2c5aa0;
+    color: white;
+}
 
-        .nkis-btn-call {
-            background: #f0f7ff;
-            color: #2c5aa0;
-        }
+.nkis-btn-call {
+    background: #f0f7ff;
+    color: #2c5aa0;
+}
 
-        .nkis-btn-direction:hover {
-            background: #1e3d6f;
-            transform: translateY(-2px);
-        }
+.nkis-btn-direction:hover {
+    background: #1e3d6f;
+    transform: translateY(-2px);
+}
 
-        .nkis-btn-call:hover {
-            background: #e1edff;
-            transform: translateY(-2px);
-        }
+.nkis-btn-call:hover {
+    background: #e1edff;
+    transform: translateY(-2px);
+}
 
-        .nkis-btn-direction i, .nkis-btn-call i {
-            margin-right: 8px;
-        }
+.nkis-btn-direction i,
+.nkis-btn-call i {
+    margin-right: 8px;
+}
 
-        .nkis-map-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
+.nkis-map-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
 
-        .nkis-feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+.nkis-feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
 
-        .nkis-feature-card:hover {
-            transform: translateY(-5px);
-        }
+.nkis-feature-card:hover {
+    transform: translateY(-5px);
+}
 
-        .nkis-feature-icon {
-            font-size: 2.5rem;
-            color: #2c5aa0;
-            margin-bottom: 20px;
-        }
+.nkis-feature-icon {
+    font-size: 2.5rem;
+    color: #2c5aa0;
+    margin-bottom: 20px;
+}
 
-        .nkis-feature-card h4 {
-            font-size: 1.3rem;
-            color: #1a3a6c;
-            margin-bottom: 15px;
-        }
+.nkis-feature-card h4 {
+    font-size: 1.3rem;
+    color: #1a3a6c;
+    margin-bottom: 15px;
+}
 
-        .nkis-feature-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
+.nkis-feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .nkis-maps-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .nkis-map-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .nkis-location-badge {
-                margin-top: 10px;
-            }
-            
-            .nkis-action-buttons {
-                flex-direction: column;
-            }
-            
-            .nkis-section-title h2 {
-                font-size: 2rem;
-            }
-        }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nkis-maps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nkis-map-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nkis-location-badge {
+        margin-top: 10px;
+    }
+
+    .nkis-action-buttons {
+        flex-direction: column;
+    }
+
+    .nkis-section-title h2 {
+        font-size: 2rem;
+    }
+}
+
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
@@ -9061,7 +9103,7 @@ li .single-process-style1 .content-box p {
     height: 450px;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .google-map iframe {

@@ -1,61 +1,45 @@
-// Newsletter form submission
-document.addEventListener('DOMContentLoaded', function() {
-    const newsletterForm = document.getElementById('newsletterForm');
-    const subscribeMessage = document.getElementById('subscribeMessage');
-    const subscribeBtn = document.getElementById('subscribeBtn');
-    
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validate terms checkbox
-            const termsCheckbox = document.getElementById('terms');
-            if (!termsCheckbox.checked) {
-                showMessage('Please agree to the terms and conditions.', 'error');
-                return;
-            }
-            
-            const formData = new FormData(this);
-            
-            // Show loading state
-            const originalText = subscribeBtn.innerHTML;
-            subscribeBtn.innerHTML = '<span class="txt">Subscribing...</span>';
-            subscribeBtn.disabled = true;
-            
-            fetch('subscribe.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                if (data === 'success') {
-                    showMessage('Thank you for subscribing! You will receive updates soon.', 'success');
-                    newsletterForm.reset();
-                } else if (data === 'invalid_email') {
-                    showMessage('Please enter a valid email address.', 'error');
-                } else {
-                    showMessage('Something went wrong. Please try again later.', 'error');
-                }
-            })
-            .catch(error => {
-                showMessage('Network error. Please check your connection and try again.', 'error');
-            })
-            .finally(() => {
-                // Reset button state
-                subscribeBtn.innerHTML = originalText;
-                subscribeBtn.disabled = false;
-            });
-        });
-    }
-    
-    function showMessage(message, type) {
-        subscribeMessage.innerHTML = message;
-        subscribeMessage.className = type;
-        subscribeMessage.style.display = 'block';
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            subscribeMessage.style.display = 'none';
-        }, 5000);
-    }
+
+document.getElementById("newsletterForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("subscribeEmail").value.trim();
+    const messageBox = document.getElementById("subscribeMessage");
+
+    const response = await fetch("subscribe.php", {
+        method: "POST",
+        body: new FormData(this)
+    });
+
+    const data = await response.json();
+    messageBox.style.display = "block";
+    messageBox.style.color = data.success ? "green" : "red";
+    messageBox.textContent = data.success || data.error;
 });
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    const form = this;
+    const formData = new FormData(form);
+
+    fetch(form.action, { method:"POST", body:formData })
+    .then(res => res.json())
+    .then(data => {
+        Swal.fire({
+            icon: data.status === "success" ? 'success' : 'error',
+            title: data.status === "success" ? 'Success!' : 'Oops!',
+            text: data.message
+        });
+        if(data.status === "success") form.reset();
+    })
+    .catch(err => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: 'Something went wrong. Try again later.'
+        });
+    });
+});
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
