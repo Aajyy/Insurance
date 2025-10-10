@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 nkisLoader.style.display = 'none';
             }, 800);
-        }, 2000); // Minimum 2 seconds display time
+        }, 1000); // Minimum 2 seconds display time
     });
     
     // Fallback: hide loader after 5 seconds regardless
