@@ -54,27 +54,24 @@
 <body class="body-bg-1">
 
     <!-- Preloader -->
-  
-           
-       
-        
-        <div class="nkis-loader" id="nkisLoader">
-            <div class="nkis-loader__logo">
-                <img src="assets/images/new images/NKIS-Shield-favicon.png" alt="NKIS Logo">
-            </div>
-            <div class="nkis-loader__name">NKIS</div>
-            <div class="nkis-loader__animation">
-                <div class="nkis-loader__ring"></div>
-                <div class="nkis-loader__ring"></div>
-                <div class="nkis-loader__ring"></div>
-            </div>
-            <div class="nkis-loader__dots">
-                <div class="nkis-loader__dot"></div>
-                <div class="nkis-loader__dot"></div>
-                <div class="nkis-loader__dot"></div>
-            </div>
-            <div class="nkis-loader__text">Insurance • Bank • Finance Services</div>
+
+    <div class="nkis-loader" id="nkisLoader">
+        <div class="nkis-loader__logo">
+            <img src="assets/images/new images/NKIS-Shield-favicon.png" alt="NKIS Logo">
         </div>
+        <div class="nkis-loader__name">NKIS</div>
+        <div class="nkis-loader__animation">
+            <div class="nkis-loader__ring"></div>
+            <div class="nkis-loader__ring"></div>
+            <div class="nkis-loader__ring"></div>
+        </div>
+        <div class="nkis-loader__dots">
+            <div class="nkis-loader__dot"></div>
+            <div class="nkis-loader__dot"></div>
+            <div class="nkis-loader__dot"></div>
+        </div>
+        <div class="nkis-loader__text">Insurance • Bank • Finance Services</div>
+    </div>
     <!-- Preloader End -->
 
     <!-- Cursor -->
@@ -202,7 +199,8 @@
                                     </div>
                                     <div class="title-box">
                                         <h5>Help?</h5>
-                                        <a href="contact@nkisadvisory.in">Send Email</a>
+                                        <a href="#contact-section">Send Email</a>
+
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +273,9 @@
                                 </div>
                             </div>
                             <div class="text-box">
-                                <p>54 Berrick 2nd St Boston, MCA 02115, <br>United States.</p>
+                                <p>Office no: 1008
+                                    Crecent business square,
+                                    <br> Kherani road sakinaka,Mumbai-400072</p>
                             </div>
                         </div>
                     </div>
@@ -301,7 +301,7 @@
                             <div class="text-box">
                                 <p><span>Phone: </span> <a href="tel:+ 98924 00314">+ 98924 00314</a></p>
                                 <p><span>Email: </span>
-                                    <a href="mailto:sendmail@NKISusa.com">sendmail@NKISusa.com</a>
+                                    <a href="mailto:contact@nkisadvisory.in">contact@nkisadvisory.in</a>
                                 </p>
                             </div>
                         </div>
@@ -328,7 +328,7 @@
                                 </div>
                             </div>
                             <div class="text-box">
-                                <p><span>Monday-Satday: </span> 9.00 am to 7.30 pm</p>
+                                <p><span>Monday-Satday: </span> 10.00 am to 7.00 pm</p>
                                 <p><span>Hotline is available 24/7.</span></p>
                             </div>
                         </div>
@@ -355,12 +355,16 @@
             </div>
             <div class="home-google-map-outer-box">
                 <div class="google-map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0449156042123!2d72.88889101095299!3d19.10568539955505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c872542fd9c9%3A0x37bdc954e80bf7e6!2sCrescent%20Business%20Square!5e0!3m2!1sen!2sin!4v1760081526947!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0449156042123!2d72.88889101095299!3d19.10568539955505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c872542fd9c9%3A0x37bdc954e80bf7e6!2sCrescent%20Business%20Square!5e0!3m2!1sen!2sin!4v1760081526947!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </section>
         <!--End Office Location-->
         <!--Start Main Contact Form-->
-        <section class="main-contact-form">
+        <section class="main-contact-form" id="contact-section">
             <div class="container">
                 <div class="sec-title text-center">
                     <div class="sub-title">
@@ -373,8 +377,8 @@
                     <div class="row">
                         <div class="col-xl-5">
                             <div class="contact-form">
-                                <form id="contact-form" name="contact_form" class="default-form2"
-                                    action="insurance/sendemail.php" method="POST">
+                                <form id="contact-form" name="contact_form" class="default-form2" action="sendemail.php"
+                                    method="POST">
 
                                     <div class="form-group">
                                         <div class="label-box">
@@ -574,6 +578,7 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/loader.js"></script>
+    <script src="assets/js/subscribe.js"></script>
 
 
 </body>

@@ -1,15 +1,19 @@
 <?php
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name    = htmlspecialchars($_POST['form_name']);
-    $email   = htmlspecialchars($_POST['form_email']);
-    $subject = htmlspecialchars($_POST['form_subject']);
-    $phone   = htmlspecialchars($_POST['form_phone']);
-    $message = htmlspecialchars($_POST['form_message']);
+    $name    = trim(htmlspecialchars($_POST['form_name'] ?? ''));
+    $email   = trim(htmlspecialchars($_POST['form_email'] ?? ''));
+    $subject = trim(htmlspecialchars($_POST['form_subject'] ?? ''));
+    $phone   = trim(htmlspecialchars($_POST['form_phone'] ?? ''));
+    $message = trim(htmlspecialchars($_POST['form_message'] ?? ''));
 
-    /* =========================
-       2. Send Email
-    ========================= */
+    if(empty($name) || empty($email) || empty($message)){
+        echo json_encode(["status"=>"error","message"=>"Please fill all required fields."]);
+        exit;
+    }
+
     $to = "sandeepyadav37806@gmail.com";  
     $email_subject = "Contact Form - " . (!empty($subject) ? $subject : "New Message");
 
@@ -23,12 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
 
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        echo "success"; 
+    if(mail($to, $email_subject, $email_body, $headers)){
+        echo json_encode(["status"=>"success","message"=>"Thank you! Your message has been sent."]);
     } else {
-        echo "error";
+        echo json_encode(["status"=>"error","message"=>"Failed to send email. Try again later."]);
     }
 } else {
-    echo "invalid request";
+    echo json_encode(["status"=>"error","message"=>"Invalid request"]);
 }
 ?>
