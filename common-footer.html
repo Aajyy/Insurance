@@ -180,7 +180,7 @@
                                 </div>
                                 <h3>Subscribe to Receive Updates</h3>
                                 <div class="subscribe-box-form">
-                                    <form id="newsletterForm" method="post" action="subscribe.php">
+                                    <form id="newsletterForm" method="post">
                                         <div class="form-group">
                                             <input type="email" name="email" id="subscribeEmail"
                                                 placeholder="Email Address" required>
@@ -261,4 +261,11 @@
     </div>
     <!--End Footer Bottom-->
 </footer>
+<script>
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent actual form submission
+    // Redirect to 404 page
+    window.location.href = '/404.html'; // or '/404' depending on your server setup
+});
+</script>
 <script src="assets/js/subscribe.js"></script>
