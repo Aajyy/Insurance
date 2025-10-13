@@ -16,6 +16,9 @@ document.getElementById("newsletterForm").addEventListener("submit", async funct
     messageBox.textContent = data.success || data.error;
 });
 
+
+// contact  form page 
+
 document.getElementById("contact-form").addEventListener("submit", function(e){
     e.preventDefault();
     const form = this;
@@ -39,7 +42,49 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
         });
     });
 });
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
 
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData
+        });
+        const result = await response.json();
+
+        if (result.status === "success") {
+            Swal.fire({
+                icon: "success",
+                title: "Success",
+                text: "Thank you for your message. It has been sent.",
+                confirmButtonColor: "#4CAF50", // green theme
+                confirmButtonText: "OK"
+            });
+            form.reset();
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: result.message,
+                confirmButtonColor: "#3085d6",
+                confirmButtonText: "Try Again"
+            });
+        }
+    } catch (error) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong. Please try again later.",
+            confirmButtonColor: "#3085d6"
+        });
+    }
+});
 
