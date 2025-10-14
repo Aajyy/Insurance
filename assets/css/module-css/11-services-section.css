@@ -1120,10 +1120,23 @@
 .servicer-single-sidebar-banner .logo-box a {
     position: relative;
     display: inline-block;
+    background: white;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding-right: 10px;
+
+
+
+
 }
 
 .servicer-single-sidebar-banner .logo-box a img {
-    width: auto;
+    width: 70px;
 }
 
 .servicer-single-sidebar-banner .content-box {
@@ -1190,8 +1203,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 4px;
     background-color: var(--thm-white);
     color: var(--thm-primary-color);
