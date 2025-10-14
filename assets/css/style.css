@@ -402,8 +402,8 @@ a {
     .nkis-wa-icon {
         width: 50px;
         height: 50px;
-        bottom: 20px;
-        right: 20px;
+        bottom: 0px;
+        right: 46px;
     }
 
     .nkis-wa-icon i {
@@ -1518,7 +1518,7 @@ select:focus {
     justify-content: center;
     width: 50px;
     height: 50px;
-    margin-bottom: 0px;
+    margin-bottom: 3px;
     background: #182045;
     border-radius: 6px;
     color: #ffffff;
