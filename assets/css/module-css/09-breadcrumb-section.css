@@ -16,7 +16,7 @@
     left: 0px;
     bottom: 0px;
     right: 0px;
-    background-color: rgb(9, 16, 51, 0.75);
+    /* background-color: rgb(9, 16, 51, 0.75); */
     background-blend-mode: luminosity;
     background-attachment: scroll;
     background-position: center center;
@@ -27,13 +27,14 @@
 
 .breadcrumb-style1-bg__overlay {
     position: absolute;
-    top: 0;
+    /* top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: #091033;
     background-blend-mode: multiply;
-    opacity: 0.45;
+    opacity: 0.45; */
+    background: transparent !important;
 }
 
 .breadcrumb-style1-bg::before {
@@ -43,8 +44,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgb(9, 16, 51);
-    background: linear-gradient(0deg, rgba(9, 16, 51, 0.23853291316526615) 70%, rgba(9, 16, 51, 1) 100%);
+    /* background: rgb(9, 16, 51);
+    background: linear-gradient(0deg, rgba(9, 16, 51, 0.23853291316526615) 70%, rgba(9, 16, 51, 1) 100%); */
 }
 
 .breadcrumb-style1-bg::after {
@@ -54,8 +55,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgb(9, 16, 51);
-    background: linear-gradient(90deg, rgba(9, 16, 51, 1) 0%, rgba(9, 16, 51, 0.5998774509803921) 35%, rgba(9, 16, 51, 0.19371498599439774) 100%);
+    /* background: rgb(9, 16, 51);
+    background: linear-gradient(90deg, rgba(9, 16, 51, 1) 0%, rgba(9, 16, 51, 0.5998774509803921) 35%, rgba(9, 16, 51, 0.19371498599439774) 100%); */
 }
 
 .breadcrumb-style1 .inner-content {
