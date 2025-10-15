@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "sandeepyadav37806@gmail.com";  
+    $to = "contact@nkisadvisory.in";  
     $email_subject = "Contact Form - " . (!empty($subject) ? $subject : "New Message");
 
     $email_body = "You have received a new message from your website contact form:\n\n" .
