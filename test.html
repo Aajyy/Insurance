@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Premium + GST Calculator</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#ffffff;--accent:#5b6cf6;--muted:#6b7280}
+    *{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{margin:20px;background:linear-gradient(180deg,#f6f8fb 0,#eef2ff 100%);color:#111}
+    .wrap{max-width:760px;margin:0 auto}
+    .card{background:var(--card);border-radius:12px;padding:22px;box-shadow:0 6px 24px rgba(16,24,40,0.06)}
+    h1{font-size:20px;margin:0 0 14px}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#24324a}
+    input[type=number],select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;font-size:14px}
+    .full{grid-column:1/-1}
+    .result{background:#fbfdff;border:1px solid #e6eefb;padding:14px;border-radius:10px;margin-top:14px}
+    .btn{appearance:none;border:0;padding:10px 12px;border-radius:8px;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid #d6d9f3}
+    .small{font-size:13px;color:var(--muted)}
+    .bold{font-weight:700}
+    .summary{display:flex;justify-content:space-between;padding:8px 0}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Premium + GST Calculator</h1>
+      <p class="lead">Enter your values below. Calculator assumes rate is per ₹1,000 of sum insured (common insurance convention). All results are rounded to 2 decimals.</p>
+
+      <div class="grid">
+        <div>
+          <label for="sumInsured">Sum Insured (₹)</label>
+          <input id="sumInsured" type="number" min="0" step="1000" value="100000" />
+        </div>
+
+        <div>
+          <label for="rate">Rate (per ₹1,000)</label>
+          <input id="rate" type="number" min="0" step="0.01" value="12.5" />
+        </div>
+
+        <div>
+          <label for="discount">Discount (%) — optional</label>
+          <input id="discount" type="number" min="0" step="0.01" value="0" />
+        </div>
+
+        <div>
+          <label for="gst">GST (%)</label>
+          <input id="gst" type="number" min="0" step="0.01" value="18" />
+        </div>
+
+        <div>
+          <label for="year">Select Policy Term (Years)</label>
+          <select id="year">
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label>Notes</label>
+          <div class="small">Base premium = (Sum Insured / 1,000) × Rate × Number of Years. Then apply discount (percent). GST is applied on the final premium amount.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+        <button id="calcBtn" class="btn btn-primary">Calculate</button>
+        <button id="clearBtn" class="btn btn-ghost">Clear</button>
+        <button id="copyBtn" class="btn" title="Copy total to clipboard">Copy total</button>
+      </div>
+
+      <div id="resultBox" class="result" style="display:none">
+        <div class="summary"><div class="small">Base premium</div><div id="basePremium" class="bold">₹0.00</div></div>
+        <div class="summary"><div class="small">After discount</div><div id="adjPremium" class="bold">₹0.00</div></div>
+        <div class="summary"><div class="small">GST amount</div><div id="gstAmount" class="bold">₹0.00</div></div>
+        <hr />
+        <div class="summary"><div class="small">Total payable</div><div id="totalPayable" class="bold">₹0.00</div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const q = id => document.getElementById(id);
+    const fmt = v => Number(v).toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2});
+
+    function calculate(){
+      const sum = Number(q('sumInsured').value) || 0;
+      const rate = Number(q('rate').value) || 0;
+      const discountPct = Number(q('discount').value) || 0;
+      const gstPct = Number(q('gst').value) || 0;
+      const years = Number(q('year').value) || 1;
+
+      // base premium per convention: (sum/1000)*rate*years
+      const base = (sum / 1000) * rate * years;
+
+      // apply discount
+      const afterDiscount = base * (1 - discountPct/100);
+
+      // gst on premium
+      const gstAmount = afterDiscount * (gstPct/100);
+      const total = afterDiscount + gstAmount;
+
+      q('basePremium').textContent = '₹' + fmt(base);
+      q('adjPremium').textContent = '₹' + fmt(afterDiscount);
+      q('gstAmount').textContent = '₹' + fmt(gstAmount);
+      q('totalPayable').textContent = '₹' + fmt(total);
+      q('resultBox').style.display = 'block';
+    }
+
+    q('calcBtn').addEventListener('click', () => calculate());
+    ['sumInsured','rate','discount','gst','year'].forEach(id => q(id).addEventListener('input', calculate));
+
+    q('clearBtn').addEventListener('click', () => {
+      q('sumInsured').value='0';q('rate').value='0';q('discount').value='0';q('gst').value='0';q('year').value='1';
+      q('resultBox').style.display='none';
+    });
+
+    q('copyBtn').addEventListener('click', async ()=>{
+      const text = q('totalPayable').textContent || '';
+      try{
+        await navigator.clipboard.writeText(text);
+        q('copyBtn').textContent = 'Copied!';
+        setTimeout(()=> q('copyBtn').textContent = 'Copy total', 1200);
+      }catch(e){
+        alert('Unable to copy — please select and copy the total manually.');
+      }
+    });
+
+    // initial calculate with defaults
+    calculate();
+  </script>
+</body>
+</html>
