@@ -156,7 +156,7 @@
                                                             <a href="groupinsurance.html">Group Insurance (GMC)</a>
                                                             <ul>
                                                                
-                                                                <li><a href="groupinsurance.html"> Comprehensive/Third
+                                                                <li><a href="ComprehensiveThirdparty.html"> Comprehensive/Third
                                                                         party</a>
                                                                 </li>
                                                             </ul>
@@ -1058,7 +1058,97 @@
         </section>
         <!--End Service Single Page-->
 
+  <section class="main-contact-form" id="contact-section">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <div class="sub-title">
+                        <h4>Send Message</h4>
+                    </div>
+                    <h2>Stay in Touch For super top-up Insurance </h2>
+                </div>
 
+                <div class="main-contact-form__inner">
+                    <div class="row">
+                        <div class="col-xl-5">
+                            <div class="contact-form">
+                                <form id="contact-form" name="contact_form" class="default-form2" action="sendemail.php"
+                                    method="POST">
+
+                                    <div class="form-group">
+                                        <div class="label-box">
+                                            <label for="formName">Name</label>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="text" name="form_name" id="formName"
+                                                placeholder="Enter your name" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="label-box">
+                                            <label for="formEmail">Email</label>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="email" name="form_email" id="formEmail"
+                                                placeholder="Email address" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="label-box">
+                                            <label for="formSubject">Subject</label>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="text" name="form_subject" id="formSubject"
+                                                placeholder="Subject">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="label-box">
+                                            <label for="formPhone">Phone</label>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="text" name="form_phone" id="formPhone"
+                                                placeholder="Enter phone num">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="label-box">
+                                            <label for="formMessage">Message</label>
+                                        </div>
+                                        <div class="input-box">
+                                            <textarea name="form_message" id="formMessage" placeholder="Write here..."
+                                                required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-box">
+                                        <input id="form_botcheck" name="form_botcheck" class="form-control"
+                                            type="hidden" value="">
+                                        <button class="btn-one" type="submit" data-loading-text="Please wait...">
+                                            <span class="txt">
+                                                Send Your Message
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-7">
+                            <div class="main-contact-form-img">
+                                <img src="assets/images/resources/send-message-v1-1.jpg" alt="image">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!--Start footer Style1 -->
               <div id="common-footer"></div>
@@ -1182,7 +1272,65 @@
     <script src="assets/js/custom.js"></script>
         <script src="assets/js/common.js"></script>
         <script src="assets/js/loader.js"></script>
+ <script src="assets/js/subscribe.js"></script>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
+            if (!form) return;
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault(); // stop default form submit
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = "Please wait...";
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: formData
+                    });
+                    const result = await response.json();
+
+                    if (result.status === "success") {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Success",
+                            text: " Thank you for contacting with NKIS advisory",
+                            confirmButtonColor: "#822f7a",
+                            confirmButtonText: "OK"
+                        });
+                        form.reset();
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Error",
+                            text: result.message,
+                            confirmButtonColor: "#d33",
+                            confirmButtonText: "Try Again"
+                        });
+                    }
+                } catch (error) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Server Error",
+                        text: "Something went wrong. Please try again later.",
+                        confirmButtonColor: "#d33"
+                    });
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            });
+        });
+    </script>
 
 
 </body>
